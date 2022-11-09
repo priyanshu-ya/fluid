@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./beds.css" />
+    <link rel="stylesheet" type="text/css" href="./navbar.css" />
+    <script src="https://kit.fontawesome.com/ed0c13e6b0.js" crossorigin="anonymous"></script>
+    <title>Beds</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            
+            <div class="navbrand">
+                <a href="./intfas.html"><i class="fa-solid fa-hospital-user"></i> Fluid</a>
+                    <ul class="navlinks">
+                    <li class="navlink"><a href="./intfas.html">Home</li></a>
+                    <li class="navlink"><a href="./about.html">AboutUs</li></a>
+                </ul>
+            </div>  
+            <div ><form><input type="submit" class="auth-button" value="Sign out"/></form></div>  
+        </nav>
+    </header>
+    <div class="beds-container">
+        <p class="beds-title">Beds</p>
+        <div class="beds container">
+            
+            <div class="beds row justify-content-center g-2 g-lg-3 row-cols-lg-4 row-cols-md-3  row-cols-sm-2 p-2 ">
+            <div class="bed-card ">
+                <h5 class="bed-number"><i class="fa-solid fa-hashtag"></i>  1</h5>
+                <div class="card-body">
+                <div class="patient text-center">
+                    <i class="fa-solid fa-user patient-bio"></i>
+                    <p class="patient-name mt-3" title="Name">Khushi Gharat</p>
+                    <p class="patient-age" title="Age">Age: 21</p>
+                </div>
+                <div class="patient">
+                    <p class="patient-status " title="Status"><i class="fa-sharp fa-solid fa-thermometer"></i> Normal</p>
+                    <p class="patient-hb" title="Heart Beat"><i class="fa-solid fa-heart"></i> 60bpm</p>
+                    <p class="saline-level" title="Saline Level"><i class="fa-solid fa-bars-progress"></i> 50%</p>
+                </div>
+            </div>
+            </div>
+            <div class="bed-card ">
+                <h5 class="bed-number"><i class="fa-solid fa-hashtag"></i>  2</h5>
+                <div class="card-body">
+                <div class="patient text-center">
+                    <i class="fa-solid fa-user patient-bio"></i>
+                    <p class="patient-name mt-3" title="Name">Priyanshu Yadav</p>
+                    <p class="patient-age" title="Age">Age: 21</p>
+                </div>
+                <div class="patient">
+                    <p class="patient-status" title="Status"><i class="fa-sharp fa-solid fa-thermometer"></i> Normal</p>
+                    <p class="patient-hb" title="Heart Beat"><i class="fa-solid fa-heart"></i> 72bpm</p>
+                    <p class="saline-level" title="Saline Level"><i class="fa-solid fa-bars-progress"></i> 80%</p>
+                </div>
+            </div>
+            </div>
+            <div class="bed-card ">
+                <h5 class="bed-number"><i class="fa-solid fa-hashtag"></i>  3</h5>
+                <div class="card-body">
+                <div class="patient text-center">
+                    <i class="fa-solid fa-user patient-bio"></i>
+                    <p class="patient-name mt-3" title="Name">Amit Dwivedi</p>
+                    <p class="patient-age" title="Age">Age: 21</p>
+                </div>
+                <div class="patient">
+                    <p class="patient-status"  title="Status"><i class="fa-sharp fa-solid fa-thermometer"></i> Normal</p>
+                    <p class="patient-hb" title="Heart Beat"><i class="fa-solid fa-heart"></i> 69bpm</p>
+                    <p class="saline-level" title="Saline Level"><i class="fa-solid fa-bars-progress"></i> 60%</p>
+                </div>
+            </div>
+            </div>
+            <div class="bed-card ">
+                <h5 class="bed-number"><i class="fa-solid fa-hashtag"></i>  4</h5>
+                <div class="card-body">
+                <div class="patient text-center">
+                    <i class="fa-solid fa-user patient-bio"></i>
+                    <p class="patient-name mt-3" title="Name">Ajinkya More</p>
+                    <p class="patient-age" title="Age">Age: 21</p>
+                </div>
+                <div class="patient">
+                    <p class="patient-status" title="Status"><i class="fa-sharp fa-solid fa-thermometer"></i> Normal</p>
+                    <p class="patient-hb"  title="Heart Rate"><i class="fa-solid fa-heart"></i> 77bpm</p>
+                    <p class="saline-level text-danger" title="Saline Level"><i class="fa-solid fa-bars-progress"></i> 10%</p>
+                </div>
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="./addFirebase.js" type="module"></script>
+    <script type="module" >
+        import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js"
+        const auth = getAuth();
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            signOut(auth).then(() => {
+            window.location.assign("./signin.html")
+            }).catch((error) => {
+            // An error happened.
+            });
+            })
+    </script>
+</body>
+</html>
