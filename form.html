@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="form.css" />
+    <title>Document</title>
+</head>
+<body style="background-color: #C598AF;">
+    
+    <div class="loginbox">
+        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/2170/2170153.png">
+        <h1>Sign In</h1>
+        <form onsubmit="return validateForm()">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter Name">
+            <label>Password</label>
+            <input type="password" placeholder="Enter Password">
+            <input type="submit" value="Sign In">
+        </form>   
+        <a href="#">Forgot Password?</a>
+    </div>
+
+    
+</body>
+</html>
+
+<!-- <div class = "formData" >
+    <form name = "simpleForm" action = "#" onsubmit = "return validateForm()" >
+    Name: <input type = "text" name = "name">
+    <input type = "submit" >
+    </form>
+    <p class = "errorMessage top-arrow" > </p>
+    </div>
+
+    <form  name="myform" method="post" onsubmit="return validateForm()">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter Name">
+        <label>Password</label>
+        <input type="password" placeholder="Enter Password">
+        <input type="submit" value="Sign In">
+    </form>   
+    <a href="#">Forgot Password?</a>
+
+    <script>
+        function validateForm() {
+        var nameVal = document.forms["simpleForm"]["Enter Name"].value;
+        if(nameVal == null || nameVal == "") {
+        document.getElementsByClassName( "errorMessage" )[0].style.visibility = "visible";
+        document.getElementsByClassName( "errorMessage" )[0].innerHTML = "Please Fill out this field";
+        return false;
+        } else {
+        return true;
+        }
+        }
+        </script> -->
