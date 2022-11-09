@@ -7,10 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="signup.css" />
+    <link rel="stylesheet" type="text/css" href="./navbar.css" />
+    <script src="https://kit.fontawesome.com/ed0c13e6b0.js" crossorigin="anonymous"></script>
     <title>Sign Up</title>
 </head>
 <body style="background-color: #C598AF;">
-    
+    <header>
+        <nav class="navbar">
+            
+            <div class="navbrand">
+                <a href="./intfas.html"><i class="fa-solid fa-hospital-user"></i> Fluid</a>
+                    <ul class="navlinks">
+                    <li class="navlink"><a href="./intfas.html">Home</li></a>
+                    <li class="navlink"><a href="./about.html">AboutUs</li></a>
+                </ul>
+            </div>  
+            <div ><a href="./signin.html"><input type="submit" class="auth-button" value="Sign in"/></a></div>  
+        </nav>
+    </header>
     <div class="loginbox">
         <img class="logo" src="https://cdn-icons-png.flaticon.com/512/2170/2170153.png">
         <h1>Sign Up</h1>
@@ -21,7 +35,7 @@
             <input type="password" id="password" placeholder="Enter Password">
             <label>Confirm Password</label>
             <input type="password" id="confPassword" placeholder="Enter Password">
-            <input type="submit" value="Sign In">
+            <input type="submit" class="form-button" value="Sign In">
         </form>   
 
     </div>

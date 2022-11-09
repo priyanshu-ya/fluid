@@ -40,8 +40,8 @@ body{
     cursor: pointer;
     border-radius: 16px;
     background-color: #E65C4F;
-    padding: 10% 10% 10% 10%;
     border: none;
+    padding: 5% 10% 7% 10%!important;
 }
 ul{
     list-style: none;
